@@ -1,6 +1,7 @@
 <?php
 include("db.php");
-$consulta = "SELECT * FROM facturas WHERE empleado = '$nombre'";
+include("consultaid.php");
+$consulta = "SELECT * FROM facturas WHERE empleado = '$nombre' and idCuadre = '$idNueva'";
 $result = mysqli_query($conn, $consulta);
 ?>
 <div class="container">
@@ -23,14 +24,12 @@ $result = mysqli_query($conn, $consulta);
                             <td>$ <?php echo $row['valor'] ?></td>
                         </tr>
                     <?php
-                    $total = $total + $row['valor'];
+                        $total = $total + $row['valor'];
                     }
                     ?>
-                    <tr>
-                        <td><h1><?php echo $total ?></h1></td>
-                    </tr>
                 </tbody>
             </table>
         </div>
     </div>
+  
 </div>

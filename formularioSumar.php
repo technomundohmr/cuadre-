@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row">
-        <div class="col-md-4 offset-4">
+        <div class="col-md-4">
             <div class="card text-center p-5 m-3">
                 <h1><?= $nombre ?></h1>
             </div>
@@ -28,6 +28,10 @@
                 <button type="submit" class="btn btn-success btn-block mt-3" name="sumar">Sumar</button>
             </form>
         </div>
+        <div class="col-md-4">
+            <?php include("liquidarCuadre.php") ?>
+        </div>
     </div>
 </div>
+
 <hr>

@@ -1,10 +1,11 @@
 <?php
 include("db.php");
+include("consultaid.php");
     if(isset($_POST['sumar'])){
         $empleado = $_POST['empleado'];
         $cliente = $_POST['cliente'];
         $valor = $_POST['valor'];
-        $query = "INSERT INTO facturas (cliente, valor, empleado) values ('$cliente', '$valor', '$empleado')";
+        $query = "INSERT INTO facturas (cliente, valor, empleado, idCuadre) values ('$cliente', '$valor', '$empleado', '$idNueva')";
         $result = mysqli_query($conn, $query);
         if(!$result){
             die('tarea fallo');
