@@ -5,7 +5,8 @@ if(isset($_POST['recibir'])){
     $empleado = $_POST['empleado'];
     $concepto = $_POST['concepto'];
     $valor = $_POST['valor'];
-    $query = "INSERT INTO recibido (concepto, valor, empleado, idCuadre) values ('$concepto', '$valor', '$empleado', '$idNueva')";
+    $id = $_POST['id'];
+    $query = "INSERT INTO recibido (concepto, valor, empleado, idCuadre) values ('$concepto', '$valor', '$empleado', '$id')";
     $result = mysqli_query($conn, $query);
     if(!$result){
         die('tarea fallo');

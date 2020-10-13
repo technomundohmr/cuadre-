@@ -11,6 +11,7 @@
             <h3>Recibido</h3>
             <form action="recibir.php" method="POST">
                 <input type="text" name="empleado" value="<?= $nombre ?>" class="d-none">
+                <input type="text" name="id" value="<?= $idNueva ?>" class="d-none">
                 <div class="form-group">
                     <input class="form-control" type="text" name="concepto" value="efectivo">
                 </div>

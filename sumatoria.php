@@ -12,6 +12,7 @@ $result = mysqli_query($conn, $consulta);
                     <tr>
                         <th>Cliente</th>
                         <th>Valor</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody class="text-center">
@@ -22,6 +23,13 @@ $result = mysqli_query($conn, $consulta);
                         <tr>
                             <td><?php echo $row['cliente'] ?></td>
                             <td>$ <?php echo $row['valor'] ?></td>
+                            <td>
+                                <form action="eliminar.php" method="post">
+                                    <input class="d-none" type="text" value="<?php echo $row['id'] ?>" name="id">
+                                    <input class="d-none" type="text" value="<?php echo $nombre ?>" name="empleado">
+                                    <button type="submit" class="btn btn-danger" name="eliminar">Eliminar</button>
+                                </form>
+                            </td>
                         </tr>
                     <?php
                         $total = $total + $row['valor'];
@@ -31,5 +39,7 @@ $result = mysqli_query($conn, $consulta);
             </table>
         </div>
     </div>
-  
+  <?php 
+  echo $idNueva
+  ?>
 </div>

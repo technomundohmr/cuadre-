@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-6 offset-3">
             <div class="card text-center p-5 m-3">
                 <h1><?= $nombre ?></h1>
             </div>
@@ -19,6 +19,7 @@
             ?>
             <form action="crear.php" method="POST">
                 <input type="text" name="empleado" value="<?= $nombre ?>" class="d-none">
+                <input type="text" name="id" value="<?= $idNueva ?>" class="d-none">
                 <div class="form-group">
                     <input id="my-input" class="form-control" type="text" name="cliente" placeholder="Cliente">
                 </div>
@@ -27,9 +28,6 @@
                 </div>
                 <button type="submit" class="btn btn-success btn-block mt-3" name="sumar">Sumar</button>
             </form>
-        </div>
-        <div class="col-md-4">
-            <?php include("liquidarCuadre.php") ?>
         </div>
     </div>
 </div>
